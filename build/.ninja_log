@@ -1,0 +1,16 @@
+# ninja log v5
+39	918	7299317763118550	CMakeFiles/Float.dir/src/ClassFloat/absolute.cpp.obj	83ec5dd9a61f1e83
+46	844	7299317762336964	CMakeFiles/Float.dir/src/ClassFloat/compare.cpp.obj	45da100fffe3b838
+3	250	7299329036057131	build.ninja	3581ff4a45cc724b
+29	51	0	clean	423c81b03df658c9
+76	988	7299317763380303	CMakeFiles/Float.dir/src/ClassFloat/print.cpp.obj	217d85598aa01ce9
+23	645	7299322633548685	CMakeFiles/console.dir/src/console/calculate.cpp.obj	fe0fb73e0ea89727
+57	931	7299317762640513	CMakeFiles/Float.dir/src/ClassFloat/format.cpp.obj	4c19046951b1f756
+2497	2749	7299324027783775	test.exe	348e255be9033c6c
+50	912	7299317763006713	CMakeFiles/Float.dir/src/ClassFloat/divide.cpp.obj	fc0266288baccc03
+807	1002	7299322637547780	high-precision-float.exe	d6f829259747ba53
+17	2495	7299324024329592	CMakeFiles/test.dir/tests/test.cpp.obj	a6831f72774b2c7c
+64	959	7299317762229027	CMakeFiles/Float.dir/src/ClassFloat/init.cpp.obj	463ba755d4c369b6
+70	1103	7299317764641480	CMakeFiles/Float.dir/src/ClassFloat/operation.cpp.obj	e559b7e8b326942c
+18	807	7299322635250499	CMakeFiles/high-precision-float.dir/src/main.cpp.obj	16d6b316af716652
+27	539	7299322632540448	CMakeFiles/console.dir/src/console/tryParse.cpp.obj	c7e9e8082370c916

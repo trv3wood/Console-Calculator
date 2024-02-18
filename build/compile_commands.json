@@ -1,0 +1,50 @@
+[
+{
+  "directory": "D:/Workspace/Code/cpp/high-precision-float/build",
+  "command": "D:\\msys2\\ucrt64\\bin\\g++.exe -DNOMINMAX -D_USE_MATH_DEFINES -ID:/Workspace/Code/cpp/high-precision-float/include -g -o CMakeFiles\\Float.dir\\src\\ClassFloat\\absolute.cpp.obj -c D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\absolute.cpp",
+  "file": "D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\absolute.cpp",
+  "output": "CMakeFiles\\Float.dir\\src\\ClassFloat\\absolute.cpp.obj"
+},
+{
+  "directory": "D:/Workspace/Code/cpp/high-precision-float/build",
+  "command": "D:\\msys2\\ucrt64\\bin\\g++.exe -DNOMINMAX -D_USE_MATH_DEFINES -ID:/Workspace/Code/cpp/high-precision-float/include -g -o CMakeFiles\\Float.dir\\src\\ClassFloat\\compare.cpp.obj -c D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\compare.cpp",
+  "file": "D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\compare.cpp",
+  "output": "CMakeFiles\\Float.dir\\src\\ClassFloat\\compare.cpp.obj"
+},
+{
+  "directory": "D:/Workspace/Code/cpp/high-precision-float/build",
+  "command": "D:\\msys2\\ucrt64\\bin\\g++.exe -DNOMINMAX -D_USE_MATH_DEFINES -ID:/Workspace/Code/cpp/high-precision-float/include -g -o CMakeFiles\\Float.dir\\src\\ClassFloat\\divide.cpp.obj -c D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\divide.cpp",
+  "file": "D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\divide.cpp",
+  "output": "CMakeFiles\\Float.dir\\src\\ClassFloat\\divide.cpp.obj"
+},
+{
+  "directory": "D:/Workspace/Code/cpp/high-precision-float/build",
+  "command": "D:\\msys2\\ucrt64\\bin\\g++.exe -DNOMINMAX -D_USE_MATH_DEFINES -ID:/Workspace/Code/cpp/high-precision-float/include -g -o CMakeFiles\\Float.dir\\src\\ClassFloat\\format.cpp.obj -c D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\format.cpp",
+  "file": "D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\format.cpp",
+  "output": "CMakeFiles\\Float.dir\\src\\ClassFloat\\format.cpp.obj"
+},
+{
+  "directory": "D:/Workspace/Code/cpp/high-precision-float/build",
+  "command": "D:\\msys2\\ucrt64\\bin\\g++.exe -DNOMINMAX -D_USE_MATH_DEFINES -ID:/Workspace/Code/cpp/high-precision-float/include -g -o CMakeFiles\\Float.dir\\src\\ClassFloat\\init.cpp.obj -c D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\init.cpp",
+  "file": "D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\init.cpp",
+  "output": "CMakeFiles\\Float.dir\\src\\ClassFloat\\init.cpp.obj"
+},
+{
+  "directory": "D:/Workspace/Code/cpp/high-precision-float/build",
+  "command": "D:\\msys2\\ucrt64\\bin\\g++.exe -DNOMINMAX -D_USE_MATH_DEFINES -ID:/Workspace/Code/cpp/high-precision-float/include -g -o CMakeFiles\\Float.dir\\src\\ClassFloat\\operation.cpp.obj -c D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\operation.cpp",
+  "file": "D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\operation.cpp",
+  "output": "CMakeFiles\\Float.dir\\src\\ClassFloat\\operation.cpp.obj"
+},
+{
+  "directory": "D:/Workspace/Code/cpp/high-precision-float/build",
+  "command": "D:\\msys2\\ucrt64\\bin\\g++.exe -DNOMINMAX -D_USE_MATH_DEFINES -ID:/Workspace/Code/cpp/high-precision-float/include -g -o CMakeFiles\\Float.dir\\src\\ClassFloat\\print.cpp.obj -c D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\print.cpp",
+  "file": "D:\\Workspace\\Code\\cpp\\high-precision-float\\src\\ClassFloat\\print.cpp",
+  "output": "CMakeFiles\\Float.dir\\src\\ClassFloat\\print.cpp.obj"
+},
+{
+  "directory": "D:/Workspace/Code/cpp/high-precision-float/build",
+  "command": "D:\\msys2\\ucrt64\\bin\\g++.exe -DNOMINMAX -D_USE_MATH_DEFINES -ID:/Workspace/Code/cpp/high-precision-float/include -g -o CMakeFiles\\test.dir\\tests\\test.cpp.obj -c D:\\Workspace\\Code\\cpp\\high-precision-float\\tests\\test.cpp",
+  "file": "D:\\Workspace\\Code\\cpp\\high-precision-float\\tests\\test.cpp",
+  "output": "CMakeFiles\\test.dir\\tests\\test.cpp.obj"
+}
+]

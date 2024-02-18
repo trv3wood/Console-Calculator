@@ -1,0 +1,4 @@
+D:/Workspace/Code/cpp/high-precision-float/build/CMakeFiles/Float.dir
+D:/Workspace/Code/cpp/high-precision-float/build/CMakeFiles/test.dir
+D:/Workspace/Code/cpp/high-precision-float/build/CMakeFiles/edit_cache.dir
+D:/Workspace/Code/cpp/high-precision-float/build/CMakeFiles/rebuild_cache.dir

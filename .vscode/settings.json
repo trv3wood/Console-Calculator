@@ -1,0 +1,8 @@
+{
+    "clangd.fallbackFlags": [
+        "-I${workspaceFolder}\\include"
+    ],
+    "cmake.configureOnOpen": true,
+    "cmake.configureOnEdit": false,
+    "cmake.options.statusBarVisibility": "icon"
+}
