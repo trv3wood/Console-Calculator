@@ -40,7 +40,7 @@ bool quitApp = false;
 
 int main() {
     std::cout << "Console Calculator in C++ version 0.1.0" << std::endl;
-    std::cout << "Type quit(q) to exit or run(r) to lauch.\n"
+    std::cout << "Type quit(q) to exit or run(r) to launch.\n"
     << "---------" << std::endl;
     std::string command = "";
     while (true) {
