@@ -27,7 +27,7 @@ include_directories(include)
 aux_source_directory(src/ClassFloat FLOATSRCS)
 add_library(Float OBJECT ${FLOATSRCS})
 
-set(isDebugMode ON)
+set(isDebugMode OFF)
 if(isDebugMode)
    add_executable(test tests/test.cpp) 
    target_link_libraries(test Float)
