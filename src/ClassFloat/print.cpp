@@ -31,7 +31,7 @@ void Float::print() {
 
 std::string Float::toString() const {
     std::string out;
-    if (!exponent) return "ERROR\n";
+    if (!exponent) return "ERROR";
     if (isNegative) out += '-';
     if (exponent < mantissa.size()) {
         for (int i = 0; i < exponent; i++) {

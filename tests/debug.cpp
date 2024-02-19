@@ -1,5 +1,3 @@
-#include <bits/stdc++.h>
-#include <iostream>
 #include "ClassFloat.h"
 
 #define TEST_PRINT_MACRO 0

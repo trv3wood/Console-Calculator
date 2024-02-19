@@ -40,9 +40,6 @@ if(isDebugMode)
    target_link_libraries(HPFtests ${CMAKE_THREAD_LIBS_INIT})
 
    add_test(Tests HPFtests)
-
-   # add_executable(debug test/debug.cpp)
-   # target_link_libraries(debug Float)
 else()
    add_executable(${PROJECT_NAME} src/main.cpp)
    target_link_libraries(${PROJECT_NAME} Float)

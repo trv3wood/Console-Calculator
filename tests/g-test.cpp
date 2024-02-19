@@ -3,9 +3,10 @@
 #include <utility>
 #include "ClassFloat.h"
 
-#define TOSTRING 1
-#define OPERATION_ADD 1
-#define OPERATION_MULTIPLY 1
+#define TOSTRING 0
+#define OPERATION_ADD 0
+#define OPERATION_MULTIPLY 0
+#define OPERATION_DIVIDE 1
 
 #if TOSTRING == 1
 #define TOSTRING_TEST
@@ -78,7 +79,6 @@ TEST(add_args, AddOperator) {
 
 #if OPERATION_MULTIPLY == 1
 #define OPERATION_MULTIPLY_TEST
-
 TEST(multiply_args, MultiplyOperator) {
     // 测试用例1：两个正数相乘
     Float a1("123456789");
@@ -109,5 +109,75 @@ TEST(multiply_args, MultiplyOperator) {
     Float b5("1");
     Float res5 = a5 * b5;
     EXPECT_EQ(res5.toString(), "123,456,789");
+}
+#endif
+
+#if OPERATION_DIVIDE == 1
+#define OPERATION_DIVIDE_TEST
+TEST(divide_args, DivideOperator) {
+    // 测试用例1：两个正数相除
+    Float a1("123.456");
+    Float b1("987.654");
+    Float res1 = a1 / b1;
+    EXPECT_EQ(res1.toString(), "0.1249992406");
+
+    // 测试用例2：一个正数和一个负数相除
+    Float a2("123.456");
+    Float b2("-987.654");
+    Float res2 = a2 / b2;
+    EXPECT_EQ(res2.toString(), "-0.1249992406");
+
+    // 测试用例3：两个负数相除
+    Float a3("-123.456");
+    Float b3("-987.654");
+    Float res3 = a3 / b3;
+    EXPECT_EQ(res3.toString(), "0.1249992406");
+
+    // 测试用例4：除0
+    Float a4("123.456");
+    Float b4("0");
+    Float res4 = a4 / b4;
+    EXPECT_EQ(res4.toString(), "ERROR");
+
+    // 测试用例5：除1
+    Float a5("123.456");
+    Float b5("1");
+    Float res5 = a5 / b5;
+    EXPECT_EQ(res5.toString(), "123.4560000000");
+
+    // 测试用例6：尾数对齐
+    Float a6("12345678901234567890.123456");
+    Float b6("123456");
+    Float res6 = a6 / b6;
+    EXPECT_EQ(res6.toString(), "100,000,639,104,090.2660877030");
+
+    // 测试用例7：两个很大的相等负数相除
+    Float a7("-123456789012.34567890");
+    Float b7("-123456789012.34567890");
+    Float res7 = a7 / b7;
+    EXPECT_EQ(res7.toString(), "1");
+
+    a7 = "1000";
+    b7 = "10";
+    res7 = a7 / b7;
+    EXPECT_EQ(res7.toString(), "100");
+
+    Float a9;
+    Float b9;
+    a9 = "12345678901234567890";
+    b9 = "987654321";
+    EXPECT_EQ((a9 / b9).toString(), "12,499,999,887.3437499900");
+
+    Float a8;
+    Float b8;
+    a8 = "-12345678901234567890";
+    b8 = "987654321";
+    EXPECT_EQ((a8 / b8).toString(), "-12,499,999,887.3437499900");
+
+    Float A1;
+    A1 = "66,666,666,666,666,666,666,666,666,666,666.66666666666666";
+    Float B1;
+    B1 = "-2";
+    EXPECT_EQ((A1 / B1).toString(), "-33,333,333,333,333,333,333,333,333,333,333.3333333333");
 }
 #endif
