@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: high-precision-float
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__Float_unscanned_Debug
+rule CXX_COMPILER__Float_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = D:/msys2/ucrt64/bin/ccache.exe ${LAUNCHER}${CODE_CHECK}D:\msys2\ucrt64\bin\g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__Float_unscanned_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__test_unscanned_Debug
+rule CXX_COMPILER__high-precision-float_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = D:/msys2/ucrt64/bin/ccache.exe ${LAUNCHER}${CODE_CHECK}D:\msys2\ucrt64\bin\g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -34,10 +34,20 @@ rule CXX_COMPILER__test_unscanned_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__test_Debug
+rule CXX_EXECUTABLE_LINKER__high-precision-float_Release
   command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && D:/msys2/ucrt64/bin/ccache.exe D:\msys2\ucrt64\bin\g++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__console_unscanned_Release
+  depfile = $DEP_FILE
+  deps = gcc
+  command = D:/msys2/ucrt64/bin/ccache.exe ${LAUNCHER}${CODE_CHECK}D:\msys2\ucrt64\bin\g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
 
 
 #############################################
@@ -52,7 +62,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = D:\msys2\ucrt64\bin\cmake.exe --regenerate-during-build -SD:\Workspace\Code\cpp\high-precision-float -BD:\Workspace\Code\cpp\high-precision-float\build
+  command = D:\msys2\ucrt64\bin\cmake.exe --regenerate-during-build -SD:\Workspace\Code\cpp\Demo -BD:\Workspace\Code\cpp\Demo\build
   description = Re-running CMake...
   generator = 1
 
