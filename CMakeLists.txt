@@ -29,7 +29,7 @@ include_directories(include)
 aux_source_directory(src/ClassFloat FLOATSRCS)
 add_library(Float OBJECT ${FLOATSRCS})
 
-set(isDebugMode ON)
+set(isDebugMode OFF)
 if(isDebugMode)
    find_package(GTest REQUIRED)
    find_package(Threads REQUIRED)
