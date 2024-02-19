@@ -52,6 +52,5 @@ std::string Float::toString() const {
             }
         }
     }
-    out += '\n';
     return out;
 }

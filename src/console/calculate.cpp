@@ -11,8 +11,6 @@ std::string calculate(const Float& num1, const Float& num2, std::string operatio
         res = num1 * num2;
     } else if (operation == "/") {
         res = num1 / num2;
-    } else {
-        throw "error in calculate()\n";
     }
     return res.toString();
 }

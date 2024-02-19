@@ -168,35 +168,30 @@ int main() {
     Float b1("987.654");
     Float res1 = a1 + b1;
     res1.print();
-    // EXPECT_NEAR(res1.toFloat(), 1111.11, 0.001);
 
     // 测试用例2：一个正数和一个负数相加
     Float a2("123.456");
     Float b2("-987.654");
     Float res2 = a2 + b2;
     res2.print();
-    // EXPECT_NEAR(res2.toFloat(), -864.198, 0.001);
 
     // 测试用例3：两个负数相加
     Float a3("-123.456");
     Float b3("-987.654");
     Float res3 = a3 + b3;
     res3.print();
-    // EXPECT_NEAR(res3.toFloat(), -1111.11, 0.001);
 
     // 测试用例4：加0
     Float a4("123.456");
     Float b4("0");
     Float res4 = a4 + b4;
     res4.print();
-    // EXPECT_NEAR(res4.toFloat(), 123.456, 0.001);
 
     // 测试用例5：加1
     Float a5("5789275087320570283750275807230572");
     Float b5("5723875027590327057203750237590275023759");
     Float res5 = a5 + b5;
     res5.print();
-    // EXPECT_NEAR(res5.toFloat(), 124.456, 0.001);
 
 }
 #endif

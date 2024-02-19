@@ -23,14 +23,23 @@ if (NOT MSVC)
    endif()
 endif()
 
+enable_testing()
+
 include_directories(include)
 aux_source_directory(src/ClassFloat FLOATSRCS)
 add_library(Float OBJECT ${FLOATSRCS})
 
-set(isDebugMode OFF)
+set(isDebugMode ON)
 if(isDebugMode)
-   add_executable(test tests/test.cpp) 
-   target_link_libraries(test Float)
+   find_package(GTest REQUIRED)
+   find_package(Threads REQUIRED)
+
+   add_executable(HPFtests tests/g-test.cpp) 
+   target_link_libraries(HPFtests Float)
+   target_link_libraries(HPFtests ${GTEST_BOTH_LIBRARIES})
+   target_link_libraries(HPFtests ${CMAKE_THREAD_LIBS_INIT})
+
+   add_test(Tests HPFtests)
 else()
    add_executable(${PROJECT_NAME} src/main.cpp)
    target_link_libraries(${PROJECT_NAME} Float)
