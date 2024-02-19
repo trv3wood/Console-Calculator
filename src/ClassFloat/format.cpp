@@ -4,13 +4,10 @@ void Float::format() {
     if (exponent > mantissa.size()) {
         exponent = mantissa.size();
     }
+
     while (exponent > 1 && mantissa[0] == 0) {
         mantissa.erase(mantissa.begin());
         exponent--;
-    }
-
-    if (mantissa.size() == 1 && mantissa[0] == 0) {
-        isNegative = false;
     }
 
     if (exponent < mantissa.size()) {
@@ -18,9 +15,13 @@ void Float::format() {
             if (mantissa[i] == 0) {
                 mantissa.erase(mantissa.begin() + i);
             } else {
-                return;
+                break;
             }
         }
+    }
+
+    if (isNegative && mantissa.size() == 1 && mantissa[0] == 0) {
+        isNegative = false;
     }
 }
 

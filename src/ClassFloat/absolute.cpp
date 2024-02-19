@@ -71,10 +71,10 @@ Float Float::subtractAbsolute(const Float& a, const Float& b) const { // |a| sho
         LOG(res.exponent)
         LOG_VECTOR(res.mantissa)
         // 去掉前导0
-        while (res.exponent > 1 && res.mantissa[0] == 0) {
-            res.mantissa.erase(res.mantissa.begin());
-            res.exponent--;
-        }
+        //while (res.exponent > 1 && res.mantissa[0] == 0) {
+            //res.mantissa.erase(res.mantissa.begin());
+            //res.exponent--;
+        //}
         LOG(res.exponent)
     } else {
         Float copy1 = a;
