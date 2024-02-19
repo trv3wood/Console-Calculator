@@ -3,9 +3,9 @@
 #include <utility>
 #include "ClassFloat.h"
 
-#define TOSTRING 0
-#define OPERATION_ADD 0
-#define OPERATION_MULTIPLY 0
+#define TOSTRING 1
+#define OPERATION_ADD 1
+#define OPERATION_MULTIPLY 1
 #define OPERATION_DIVIDE 1
 
 #if TOSTRING == 1
