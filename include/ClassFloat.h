@@ -13,7 +13,6 @@ public:
 
     bool operator<(const Float &other) const;
     bool operator==(const Float& other) const;
-    bool operator<=(const Float &other) const;
 
     Float operator+(const Float &other) const;
     Float operator-(const Float &other) const;
