@@ -20,8 +20,6 @@ public:
     Float operator*(const Float &other) const;
     Float operator/(const Float &other) const;
 
-    Float divide(const long double& divisor, int divisorLen) const;
-
     void print();
     std::string toString() const;
     void format();
@@ -35,6 +33,5 @@ private:
     bool absoluteValLessThan(const Float &other) const; // <
     Float subtractAbsolute(const Float &a, const Float &b) const;
     Float addAbsolute(const Float &a, const Float &b) const;
-    bool isZero() const;
     void roundMantissa();
 };
