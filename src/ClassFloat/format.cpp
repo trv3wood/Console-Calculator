@@ -1,10 +1,6 @@
 #include "ClassFloat.h"
 
 void Float::format() {
-    if (exponent > mantissa.size()) {
-        exponent = mantissa.size();
-    }
-
     while (exponent > 1 && mantissa[0] == 0) {
         mantissa.erase(mantissa.begin());
         exponent--;
@@ -25,7 +21,7 @@ void Float::format() {
     }
 }
 
-void Float::alignMantissa(Float& a, Float& b) const {
+void Float::alignMantissa(Float& a, Float& b) {
     if (a.exponent > b.exponent) {
         b.mantissa.insert(b.mantissa.begin(), a.exponent - b.exponent, 0);
         b.exponent = a.exponent;

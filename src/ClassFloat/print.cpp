@@ -30,26 +30,19 @@ void Float::print() {
 }
 
 std::string Float::toString() const {
-    std::string out;
+    std::string out = "";
     if (!exponent) return "ERROR";
     if (isNegative) out += '-';
-    if (exponent < mantissa.size()) {
-        for (int i = 0; i < exponent; i++) {
-            out += mantissa[i] + '0';
-            if ((exponent - i - 1) % 3 == 0 && (exponent - i - 1)) {
-                out += ',';
-            }
+    for (int i = 0; i < exponent; i++) {
+        out += mantissa[i] + '0';
+        if ((exponent - i - 1) % 3 == 0 && (exponent - i - 1)) {
+            out += ',';
         }
+    }
+    if (exponent < mantissa.size()) {
         out += '.';
         for (int i = exponent; i < mantissa.size(); i++) {
             out += mantissa[i] + '0';
-        }
-    } else {
-        for (int i = 0; i < mantissa.size(); i++) {
-            out += mantissa[i] + '0';
-            if ((mantissa.size() - i - 1) % 3 == 0 && (mantissa.size() - i - 1)) {
-                out += ',';
-            }
         }
     }
     return out;

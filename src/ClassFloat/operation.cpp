@@ -16,7 +16,7 @@ std::cout << std::endl;
 #define LOG_VECTOR(x)
 #endif
 
-Float Float::operator+(const Float& other) const {
+Float Float::operator+(Float& other) {
     Float res;
     if (isNegative == other.isNegative) {
         res = addAbsolute(*this, other);
@@ -29,12 +29,12 @@ Float Float::operator+(const Float& other) const {
             res = subtractAbsolute(*this, other);
             res.isNegative = isNegative;
         }
+        res.format();
     }
-    res.format();
     return res;
 }
 
-Float Float::operator-(const Float& other) const {
+Float Float::operator-(Float& other) {
     Float res;
     if (*this == other) return res;
     if (isNegative != other.isNegative) {
@@ -48,12 +48,14 @@ Float Float::operator-(const Float& other) const {
             res = subtractAbsolute(*this, other);
             res.isNegative = isNegative;
         }
+        res.format();
     }
-    res.format();
     return res;
 }
 
 Float Float::operator*(const Float& other) const {
+    Float zero;
+    if (*this == zero || other == zero) return zero;
     Float res;
     res.mantissa.clear();
     res.mantissa.resize(mantissa.size() + other.mantissa.size() - 1, 0);
@@ -82,7 +84,7 @@ Float Float::operator*(const Float& other) const {
         res.exponent++;// 如果有进位，指数+1
     }
     res.isNegative = isNegative != other.isNegative;
-    res.format();
+    // res.format();
     return res;
 }
 
@@ -118,11 +120,10 @@ Float Float::operator/(const Float& divisor) const {
         dividend.erase(dividend.begin());
     }
     dividend.insert(dividend.end(), 11, 0);
-
     
-    // 余数
+    auto p = result.mantissa.get_allocator().allocate(dividend.size());
     std::vector<int> remainder;
-    
+    auto ptr = remainder.get_allocator().allocate(dividend.size());
     // 执行长除法
     for (int i = 0; i < dividend.size(); i++) {
         remainder.push_back(dividend[i]);
