@@ -23,9 +23,3 @@ bool Float::operator<(const Float& other) const {
 bool Float::operator==(const Float& other) const {
     return exponent == other.exponent && mantissa == other.mantissa && isNegative == other.isNegative;
 }
-
-bool Float::isZero() const {
-    Float a = *this;
-    if (a.toString() == "0") return true;
-    return false;
-}
