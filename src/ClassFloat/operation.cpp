@@ -1,5 +1,6 @@
 #include "ClassFloat.h"
 #include "divide.h"
+#include <utility>
 #include <vector>
 #define FL_DEBUG_CALCPP 0
 
@@ -55,7 +56,7 @@ Float Float::operator-(Float& other) {
 
 Float Float::operator*(const Float& other) const {
     Float zero;
-    if (*this == zero || other == zero) return zero;
+    if (*this == zero || other == zero) return std::move(zero);
     Float res;
     res.mantissa.clear();
     res.mantissa.resize(mantissa.size() + other.mantissa.size() - 1, 0);
