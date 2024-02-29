@@ -30,7 +30,7 @@ aux_source_directory(src/ClassFloat FLOATSRCS)
 add_library(Float OBJECT ${FLOATSRCS})
 
 set(isDebugMode OFF)
-if(isDebugMode)
+if(isDebugMode) #编译测试程序
    find_package(GTest REQUIRED)
    find_package(Threads REQUIRED)
 
@@ -40,7 +40,7 @@ if(isDebugMode)
    target_link_libraries(HPFtests ${CMAKE_THREAD_LIBS_INIT})
 
    add_test(Tests HPFtests)
-else()
+else() #编译发布版本
    add_executable(${PROJECT_NAME} src/main.cpp)
    target_link_libraries(${PROJECT_NAME} Float)
 
