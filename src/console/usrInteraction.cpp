@@ -7,7 +7,7 @@ bool usrInteraction(std::string& usrInput, bool(*isValidFunc)(const std::string&
         std::cin >> usrInput;
         if (isValidFunc(usrInput)) {
             return quitApp;
-        } else if (usrInput == "quit" || usrInput == "quit") {
+        } else if (usrInput == "quit" || usrInput == "q") {
             quitApp = true;
             return quitApp;
         } else {
