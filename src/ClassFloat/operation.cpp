@@ -85,6 +85,7 @@ Float Float::operator*(const Float& other) const {
         res.exponent++;// 如果有进位，指数+1
     }
     res.isNegative = isNegative != other.isNegative;
+    res.format();
     return res;
 }
 
